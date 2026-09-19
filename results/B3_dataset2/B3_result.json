@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-09-18T00:30:05+0800",
+  "dataset": "/mnt/t9/datasets/GSE95753_neurogenesis/DentateGyrus.loom",
+  "status": "ran",
+  "data_adaptation": {
+    "n_cells": 18213,
+    "n_genes_raw": 27998,
+    "main_gene_universe": 17714,
+    "overlap_with_main": 13335,
+    "overlap_fraction_of_main": 0.7528,
+    "overlap_fraction_of_dataset": 0.4763,
+    "ms_shape": [
+      18213,
+      27998
+    ],
+    "mu_shape": [
+      18213,
+      27998
+    ],
+    "latent_source": "PCA30-10d, deviation declared",
+    "inputs_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs"
+  },
+  "grn_resources": {
+    "dorothea": {
+      "available": false,
+      "error": "No module named 'dorothea'"
+    },
+    "celloracle": {
+      "available": false,
+      "error": "No module named 'celloracle'"
+    },
+    "decoupler": {
+      "available": false,
+      "error": "No module named 'decoupler'"
+    },
+    "trrust": {
+      "available": false,
+      "error": "No module named 'trrust'"
+    }
+  },
+  "w_stats": {
+    "source": "TRRUST v2 mouse",
+    "n_genes": 13335,
+    "n_tfs": 458,
+    "nnz": 2866,
+    "sparsity": 0.999984,
+    "main_w_nnz": 194843,
+    "main_w_sparsity": 0.999379,
+    "edge_ratio_to_main": 0.0147
+  },
+  "l2_l3": {
+    "l2_runtime_sec": 4914.3,
+    "l2_peak_gpu_delta_gb": 0.0,
+    "production_l3": {
+      "K": 10,
+      "tol": 0.001,
+      "max_iter": 10,
+      "batch_size": 1024,
+      "runtime_sec": 22.0,
+      "peak_gpu_gb": 4.37
+    },
+    "tightened_reference_l3": {
+      "K": 20,
+      "tol": 1e-06,
+      "max_iter": 50,
+      "batch_size": 512,
+      "retry_history": [
+        {
+          "batch_size": 1024,
+          "status": "failed: 显存红线违反: 8.19 GB >= 8 GB"
+        },
+        {
+          "batch_size": 512,
+          "status": "ran"
+        }
+      ],
+      "runtime_sec": 68.61,
+      "peak_gpu_gb": 4.1,
+      "residual_vs_tightened": {
+        "relative_l2": {
+          "median": 0.00047670944169163104,
+          "p99": 0.013151355428122267,
+          "min": 9.197333279077358e-05,
+          "max": 0.030442366434541433
+        },
+        "cosine": {
+          "median": 0.9999998879811944,
+          "p99": 0.9999999930893146,
+          "min": 0.9996388525776735,
+          "max": 0.9999999958028584
+        }
+      }
+    },
+    "cpu_l3": {
+      "K": 10,
+      "batch_size": 1024,
+      "runtime_sec": 1012.0,
+      "peak_gpu_gb": 0.0
+    },
+    "cpu_cuda_consistency": {
+      "relative_l2": {
+        "median": 0.00037531025455206265,
+        "p99": 0.013629543502780204,
+        "min": 1.94412157461945e-06,
+        "max": 0.03128208257145557
+      },
+      "cosine": {
+        "median": 0.9999999322085851,
+        "p99": 0.9999999999446431,
+        "min": 0.9996091849534438,
+        "max": 0.9999999999981145
+      }
+    },
+    "main_protocol_batch_check": {
+      "source": "script_default_inference (no run log found in JSON)",
+      "V1_ode_residual_ref_bs_default": 1024,
+      "V1_iteration_sweep_ref_bs_default": 256,
+      "B3_tightened_actual_batch": 512,
+      "consistent_with_V1_ode_residual": false
+    }
+  },
+  "block_reason": "No curated GRN resource available in this environment. DoRothEA (via decoupler/dorothea), CellOracle, and TRRUST are all missing. Cannot build W.npz for dataset2 without network prior.",
+  "install_notes": "To unblock: pip install celloracle; install decoupler + dorothea data package; or obtain TRRUST TSV manually. No pip install was performed per Plan B discipline.",
+  "timestamp_continue": "2026-09-18T00:38:40+0800",
+  "comparability_note": "TRRUST-derived W has far fewer edges than the main-atlas W (2,866 vs 194,843), so absolute residual values in B3 are not directly comparable to the main-atlas V1 audit. The B3 conclusion is comparable only at the level of numerical discipline (convergence, cross-hardware consistency, and bounded sensitivity). Additionally, the tightened reference in B3 used batch_size=512 due to an OOM retry, while the main V1 protocol defaults are ref_bs=1024 (V1_ode_residual) and bs=256 (V1_iteration_sweep); batch size does not affect per-cell Picard propagation numerics, but the deviation is declared.",
+  "timestamp_finalize": "2026-09-18T02:23:31+0800",
+  "cpu_cuda_diagnosis": {
+    "classification": "CONFIG_CONSISTENT+TAIL_EFFECT",
+    "config_check": {
+      "K": [
+        10,
+        10,
+        true
+      ],
+      "tol": [
+        0.001,
+        0.001,
+        true
+      ],
+      "max_iter": [
+        10,
+        10,
+        true
+      ],
+      "batch_size": [
+        1024,
+        1024,
+        true
+      ]
+    },
+    "route_metadata": {
+      "cuda": {
+        "engine_route": "closed_form_foh",
+        "picard_residual_max": 0.0006606538081541657,
+        "picard_residual_max_eff": 0.0006606538081541657,
+        "krylov_residual_probe": 0.0,
+        "n_unconverged_batches": 0,
+        "route_counts": {
+          "closed_form_foh": 18,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "N": 18213,
+        "G": 13335,
+        "alpha_is_per_cell": true
+      },
+      "cpu": {
+        "engine_route": "closed_form_foh",
+        "picard_residual_max": 1.384062557008292e-06,
+        "picard_residual_max_eff": 2e-06,
+        "krylov_residual_probe": 1.1636556883407217e-35,
+        "n_unconverged_batches": 18,
+        "route_counts": {
+          "closed_form_foh": 18,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "N": 18213,
+        "G": 13335,
+        "alpha_is_per_cell": true
+      },
+      "batch_route_mismatch": 0
+    },
+    "per_cell": {
+      "relative_l2": {
+        "median": 0.00037531025455206265,
+        "p99": 0.013629543502780204,
+        "max": 0.03128208257145557,
+        "n_above_1e-2": 507,
+        "n_above_1e-3": 5362
+      },
+      "cosine_min": 0.9996091849534438,
+      "worst_cell": {
+        "index": 15277,
+        "rel_l2": 0.03128208257145557,
+        "cosine": 0.9996091849534438
+      }
+    },
+    "interpretation": "CPU and CUDA L3 configs match (K=10, tol=1e-3, max_iter=10, batch=1024). Both routes are closed_form_foh for all 18 batches, so no routing mismatch. Relative-L2 median is 3.753e-04 (≤1e-3) but max is 3.128e-02, affecting 507 / 18213 cells above 1e-2. This is consistent with FP32 non-associativity amplified in low-velocity cells, not a configuration bug.",
+    "rerun_plan": "No config-level rerun needed. If stricter CPU/CUDA agreement is desired, re-run both sides with identical deterministic FP32 accumulation (not supported by current engine) or use full-fp64 fallback; otherwise accept as bounded numerical drift."
+  }
+}

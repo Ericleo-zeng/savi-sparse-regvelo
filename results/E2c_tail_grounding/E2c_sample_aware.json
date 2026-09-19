@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-09-16T10:10:44",
+  "cmd": "12b_e2c_sample_aware_2026-09-16.py",
+  "state_check": {
+    "C1q_inflammatory": {
+      "rerun": 19,
+      "recorded": 19
+    },
+    "DAM_like": {
+      "rerun": 3,
+      "recorded": 3
+    },
+    "Homeostatic": {
+      "rerun": 12,
+      "recorded": 12
+    },
+    "IFN_responsive": {
+      "rerun": 12,
+      "recorded": 12
+    },
+    "PU1low_lymphoid": {
+      "rerun": 4,
+      "recorded": 4
+    },
+    "Proliferating": {
+      "rerun": 0,
+      "recorded": 0
+    }
+  },
+  "by_sample": [
+    {
+      "sample": "GSM8976271",
+      "n_cells": 80,
+      "top1pct_n": 2,
+      "c1q_top_n": 1
+    },
+    {
+      "sample": "GSM8976272",
+      "n_cells": 143,
+      "top1pct_n": 5,
+      "c1q_top_n": 2
+    },
+    {
+      "sample": "GSM8976273",
+      "n_cells": 828,
+      "top1pct_n": 13,
+      "c1q_top_n": 3
+    },
+    {
+      "sample": "GSM8976274",
+      "n_cells": 771,
+      "top1pct_n": 3,
+      "c1q_top_n": 1
+    },
+    {
+      "sample": "GSM8976275",
+      "n_cells": 241,
+      "top1pct_n": 3,
+      "c1q_top_n": 1
+    },
+    {
+      "sample": "GSM8976276",
+      "n_cells": 193,
+      "top1pct_n": 0,
+      "c1q_top_n": 0
+    },
+    {
+      "sample": "GSM8976277",
+      "n_cells": 620,
+      "top1pct_n": 5,
+      "c1q_top_n": 0
+    },
+    {
+      "sample": "GSM8976278",
+      "n_cells": 362,
+      "top1pct_n": 6,
+      "c1q_top_n": 5
+    },
+    {
+      "sample": "GSM8976279",
+      "n_cells": 367,
+      "top1pct_n": 4,
+      "c1q_top_n": 2
+    },
+    {
+      "sample": "GSM9011862",
+      "n_cells": 660,
+      "top1pct_n": 5,
+      "c1q_top_n": 3
+    },
+    {
+      "sample": "GSM9011863",
+      "n_cells": 449,
+      "top1pct_n": 2,
+      "c1q_top_n": 1
+    },
+    {
+      "sample": "GSM9011864",
+      "n_cells": 286,
+      "top1pct_n": 2,
+      "c1q_top_n": 0
+    }
+  ],
+  "c1q_top_n": 19,
+  "c1q_top_distinct_samples": 9,
+  "c1q_top_max_sample_share": 0.2631578947368421,
+  "concentration_perm_p": 0.5665,
+  "perm_B": 20000,
+  "fisher_table": [
+    [
+      19,
+      31
+    ],
+    [
+      923,
+      4027
+    ]
+  ],
+  "fisher_OR": 2.6740642365358402,
+  "fisher_p": 0.0014964038585623125
+}

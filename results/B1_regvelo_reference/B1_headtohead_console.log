@@ -1,0 +1,10 @@
+[2026-09-18T13:43:28+0800] Selecting HVG2k from 5k subset by spliced variance...
+[2026-09-18T13:43:28+0800] Selected 2000 genes; top variance=23432.086
+[2026-09-18T13:43:28+0800] Reduced inputs: N=500, G=2000, W nnz=7996, gene_hash=fcae0d19135a8a32
+[2026-09-18T13:43:28+0800] Running SAVI L2 on HVG2k/500...
+[2026-09-18T13:43:57+0800] SAVI L2 completed in 29.1s
+[2026-09-18T13:43:58+0800] SAVI velocity shape=(500, 2000)
+[2026-09-18T13:43:58+0800] [W conversion] dense shape=(2000, 2000), nnz=7996
+[2026-09-18T13:43:58+0800] [RegVelo GPU] start training
+[2026-09-18T13:46:11+0800] [RegVelo GPU] training done in 132.5s; peak GPU 4.31 GB
+[2026-09-18T13:46:11+0800] B1 head-to-head completed on GPU. cosine median=-0.0958

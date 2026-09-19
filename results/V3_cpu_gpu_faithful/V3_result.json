@@ -1,0 +1,52 @@
+{
+  "n_cells": 5000,
+  "batch_size": 1024,
+  "checkpoint": "results/V5_rate_max/ckpt_adaptive",
+  "ms": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/_subset/Ms_sub_n5000.npy",
+  "mu": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/_subset/Mu_sub_n5000.npy",
+  "scope": "faithful-refit",
+  "arrays": {
+    "u_end": {
+      "median": 9.8824149541542e-07,
+      "p95": 6.945023581647878e-06,
+      "p99": 0.00012050188512788837,
+      "max": 0.0003030009245145024,
+      "mean": 4.24729482618439e-06,
+      "max_abs_diff": 0.1552734375
+    },
+    "s_end": {
+      "median": 1.5698147620473918e-08,
+      "p95": 4.684892196693166e-08,
+      "p99": 6.735406213744239e-07,
+      "max": 5.773178574680236e-06,
+      "mean": 3.771762827377196e-08,
+      "max_abs_diff": 0.0008042603731155396
+    },
+    "v": {
+      "median": 3.602243171106517e-07,
+      "p95": 5.95256722292045e-07,
+      "p99": 1.4311827560593576e-06,
+      "max": 7.1275853334290715e-06,
+      "mean": 4.0877649396736406e-07,
+      "max_abs_diff": 0.0014370977878570557
+    }
+  },
+  "route_check": {
+    "cpu": {
+      "closed_form_foh": 5,
+      "krylov_expmv": 0,
+      "full_sparse_expmv": 0,
+      "full_dynamics_path": 0
+    },
+    "cuda": {
+      "closed_form_foh": 5,
+      "krylov_expmv": 0,
+      "full_sparse_expmv": 0,
+      "full_dynamics_path": 0
+    },
+    "identical": true
+  },
+  "v_cosine_min": 0.9999999999746119,
+  "verdict": "WARN",
+  "worst_max_rel": 0.0003030009245145024
+}

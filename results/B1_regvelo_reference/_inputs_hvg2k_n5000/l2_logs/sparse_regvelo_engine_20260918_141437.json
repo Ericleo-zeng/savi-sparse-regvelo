@@ -1,0 +1,23 @@
+{
+  "script": "sparse_regvelo_engine",
+  "device": "cuda",
+  "n_cells": 5000,
+  "n_genes": 2000,
+  "n_rounds": 2,
+  "K": 10,
+  "batch_size": 1024,
+  "picard_max_iter": 10,
+  "mode": "hard",
+  "rate_max": 107.30583953857422,
+  "rate_max_mode": "adaptive",
+  "beta_p995_probe": 89.4215316772461,
+  "gamma_p995_probe": 31.292207717895508,
+  "gate_violations": 1200,
+  "n_gated": 1200,
+  "gated_genes_route": "full_dynamics_path",
+  "l2_checkpoint_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n5000/l2_checkpoint",
+  "init_gamma_over_beta_mean": 0.16450735926628113,
+  "l1_gate_violations": 1200,
+  "wall_time_sec": 254.6645,
+  "peak_memory_gb": 0.0001
+}

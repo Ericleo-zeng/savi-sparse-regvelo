@@ -1,0 +1,21 @@
+{
+  "N": 5000,
+  "G": 17714,
+  "n_rounds": 2,
+  "K": 10,
+  "batch_size": 2048,
+  "hard": true,
+  "picard_max_iter": 10,
+  "rate_max": 20.0,
+  "rate_max_requested": 20.0,
+  "rate_max_actual": 107.30583953857422,
+  "rate_max_mode": "adaptive",
+  "beta_p995": 89.4215316772461,
+  "gamma_p995": 89.4215316772461,
+  "l3_actual_batch_size": 1024,
+  "provenance_recovered_from": "logs_l2_adaptive/*.json (JsonLog)",
+  "provenance_backfill_date": "2026-09-14",
+  "provenance_note": "B2 gene scaling subset: first 17714 genes from 17714, first 5000 cells from 74984.",
+  "subset_n_cells": 5000,
+  "subset_n_genes": 17714
+}

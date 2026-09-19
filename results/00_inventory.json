@@ -1,0 +1,277 @@
+{
+  "validation_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo",
+  "sections": {
+    "engine_inputs": {
+      "Ms": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_input/Ms.npy",
+        "exists": true,
+        "size_mb": 5066.93,
+        "shape": [
+          74984,
+          17714
+        ],
+        "dtype": "float32",
+        "shape_ok": true
+      },
+      "Mu": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_input/Mu.npy",
+        "exists": true,
+        "size_mb": 5066.93,
+        "shape": [
+          74984,
+          17714
+        ],
+        "dtype": "float32",
+        "shape_ok": true
+      },
+      "X_scVI": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_input/X_scVI.npy",
+        "exists": true,
+        "size_mb": 2.86,
+        "shape": [
+          74984,
+          10
+        ],
+        "dtype": "float32",
+        "shape_ok": true
+      },
+      "W": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_input/W.npz",
+        "exists": true,
+        "size_mb": 0.03,
+        "shape": [
+          17714,
+          17714
+        ],
+        "nnz": 194843,
+        "edges_ok": true
+      }
+    },
+    "l2_checkpoints": [
+      {
+        "dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/sparse_regvelo/l2_checkpoint",
+        "has_metadata": false
+      },
+      {
+        "dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/sparse_regvelo/l2_checkpoint (副本)",
+        "has_metadata": true,
+        "meta": {
+          "N": 74984,
+          "G": 17714,
+          "n_rounds": 2,
+          "K": 10,
+          "batch_size": 2048,
+          "hard": true,
+          "picard_max_iter": 10
+        },
+        "files": [
+          "W.npz",
+          "alpha_fit.npy",
+          "beta.npy",
+          "bias.npy",
+          "gamma.npy",
+          "gate.npy",
+          "metadata.json",
+          "t.npy"
+        ],
+        "provenance_ok": false,
+        "rate_max_recorded": null
+      }
+    ],
+    "l3_output": {
+      "dir": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_output/l3_output (副本)",
+      "files": [
+        "u_end.npy"
+      ],
+      "u_end.npy": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_output/l3_output (副本)/u_end.npy",
+        "exists": true,
+        "size_mb": 5066.93,
+        "shape": [
+          74984,
+          17714
+        ],
+        "dtype": "float32",
+        "shape_ok": true
+      },
+      "s_end.npy": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_output/l3_output (副本)/s_end.npy",
+        "exists": false
+      },
+      "v.npy": {
+        "path": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_output/l3_output (副本)/v.npy",
+        "exists": false
+      }
+    },
+    "engine_code": {
+      "common.py": true,
+      "closed_form_kernel.py": true,
+      "decoupled_velocity_engine.py": true,
+      "sparse_regvelo_engine.py": true,
+      "run_l3_only.py": true
+    },
+    "recent_logs": [
+      {
+        "file": "sparse_regvelo_engine_20260906_115132.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 2,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 0.0001610068284207955,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0023,
+        "wall_time_sec": 2.0068
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_115134.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 2,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 0.0005668050143867731,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0023,
+        "wall_time_sec": 2.0228
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_115154.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 2,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 0.00014180787547957152,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0682,
+        "wall_time_sec": 8.3411
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_115156.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 2,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 0.0001610068284207955,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0023,
+        "wall_time_sec": 1.8468
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_115158.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 2,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 0.0005668050143867731,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0023,
+        "wall_time_sec": 1.8285
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_175009.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 1,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 8.655116107547656e-05,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0027,
+        "wall_time_sec": 3.5117
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_180803.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 1,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 8.646550122648478e-05,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0027,
+        "wall_time_sec": 3.5736
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_183125.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 1,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 8.655141573399305e-05,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0027,
+        "wall_time_sec": 3.4583
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_191809.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 1,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 8.714601426618174e-05,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0027,
+        "wall_time_sec": 3.4726
+      },
+      {
+        "file": "sparse_regvelo_engine_20260906_195229.json",
+        "engine_route": "closed_form_foh",
+        "route_counts": {
+          "closed_form_foh": 1,
+          "krylov_expmv": 0,
+          "full_sparse_expmv": 0,
+          "full_dynamics_path": 0
+        },
+        "picard_residual_max": 8.673459524288774e-05,
+        "rate_max": null,
+        "rate_max_mode": null,
+        "n_gated": 10,
+        "peak_memory_gb": 0.0027,
+        "wall_time_sec": 3.3612
+      }
+    ]
+  },
+  "production_checkpoint": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/sparse_regvelo/l2_checkpoint (副本)"
+}

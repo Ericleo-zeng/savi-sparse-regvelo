@@ -1,0 +1,11 @@
+[2026-09-18T14:15:22+0800] Loaded 2000 HVG genes from /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n500/hvg_genes.txt
+[2026-09-18T14:15:23+0800] Built inputs: N=5000, G=2000, W nnz=7996, gene_hash=fcae0d19135a8a32
+[2026-09-18T14:15:23+0800] Running SAVI L2 on HVG2k/5000...
+[2026-09-18T14:20:19+0800] SAVI L2 completed in 296.3s
+[2026-09-18T14:20:20+0800] SAVI L3 completed in 1.2s; v shape=(5000, 2000)
+[2026-09-18T14:20:20+0800] [W conversion] dense shape=(2000, 2000), nnz=7996
+[2026-09-18T14:20:21+0800] [RegVelo GPU] start training
+[2026-09-18T14:48:17+0800] [RegVelo GPU] training done in 1675.7s; peak GPU 4.93 GB
+[2026-09-18T14:48:42+0800] Running scVelo dynamical anchor (fixed pipeline)...
+[2026-09-18T14:49:29+0800] Wrote /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/B1_headtohead_n5000.json
+[2026-09-18T14:49:29+0800] Appended section 5 to /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/B1_headtohead_diagnosis.md

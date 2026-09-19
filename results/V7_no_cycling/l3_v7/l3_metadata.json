@@ -1,0 +1,28 @@
+{
+  "engine_route": "closed_form_foh",
+  "picard_residual_max": 0.0009634432499296963,
+  "picard_residual_max_eff": 0.0009634432499296963,
+  "krylov_residual_probe": 0.0,
+  "n_unconverged_batches": 0,
+  "route_counts": {
+    "closed_form_foh": 5,
+    "krylov_expmv": 0,
+    "full_sparse_expmv": 0,
+    "full_dynamics_path": 0
+  },
+  "N": 5000,
+  "G": 17657,
+  "alpha_is_per_cell": true,
+  "source_checkpoint": {
+    "path": "/home/lab-zeng/research_storage/\u5de5\u4f5c\u6587\u4ef6/AD_Regvelo\u4f18\u5316\u7b56\u7565/validation_Sparse_regvelo/results/V7_no_cycling/ckpt_v7",
+    "beta_sha256": "3f82f671449a33fcbc75a74725c53973fd5de1953d449054e112e65839fc3d30",
+    "gamma_sha256": "9956c04cfd062f0df1bf7e490ed63479aafecd28653dc1246163778938625648",
+    "metadata_sha256": "17f790efc85ec1d15b8284b5bc026199009e701a6b1b25a76f167a3d36d8af6b",
+    "rate_max_requested": null,
+    "rate_max_actual": 107.30583953857422,
+    "rate_max_mode": "adaptive",
+    "N": 5000,
+    "G": 17657,
+    "n_rounds": 2
+  }
+}

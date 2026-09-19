@@ -1,0 +1,15 @@
+{
+  "N": 5000,
+  "G": 17714,
+  "n_rounds": 2,
+  "K": 10,
+  "batch_size": 2048,
+  "hard": true,
+  "picard_max_iter": 10,
+  "rate_max_requested": 100.0,
+  "rate_max": 100.0,
+  "rate_max_actual": 100.0,
+  "rate_max_mode": "manual",
+  "beta_p995": null,
+  "gamma_p995": null
+}

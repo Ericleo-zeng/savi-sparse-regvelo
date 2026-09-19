@@ -1,0 +1,50 @@
+/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py:188: DeprecationWarning: Automatic neighbor calculation is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors first with Scanpy.
+  scv.pp.moments(ad, n_pcs=10, n_neighbors=30)
+/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/scvelo/preprocessing/moments.py:71: DeprecationWarning: `neighbors` is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors with Scanpy.
+  neighbors(
+/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/scvelo/preprocessing/neighbors.py:233: DeprecationWarning: Automatic computation of PCA is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute PCA with Scanpy first.
+  _set_pca(adata=adata, n_pcs=n_pcs, use_highly_variable=use_highly_variable)
+[2026-09-18T13:48:50+0800] Loading SAVI and RegVelo velocities...
+[2026-09-18T13:48:50+0800] SAVI v shape=(500, 2000), RegVelo v shape=(500, 2000), genes=2000
+[2026-09-18T13:48:50+0800] Running scVelo dynamical anchor...
+Normalized count data: X, spliced, unspliced.
+computing neighbors
+    finished (0:00:05)
+computing moments based on connectivities
+    finished (0:00:00)
+recovering dynamics (using 1/32 cores)
+WARNING: Unable to create progress bar. Consider installing `tqdm` as `pip install tqdm` and `ipywidgets` as `pip install ipywidgets`,
+or disable the progress bar using `show_progress_bar=False`.
+/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=96365) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+    finished (0:00:06)
+computing velocities
+    finished (0:00:00)
+Traceback (most recent call last):
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 234, in <module>
+    main()
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 80, in main
+    scv_cos = run_scvelo_anchor(hvg_genes)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 228, in run_scvelo_anchor
+    "savi_vs_scvelo": summarize(cos_s),
+                      ^^^^^^^^^^^^^^^^
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 45, in summarize
+    "p99": float(np.percentile(arr, 99)),
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4246, in percentile
+    return _quantile_unchecked(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4510, in _quantile_unchecked
+    return _ureduce(a,
+           ^^^^^^^^^^^
+  File "/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 3880, in _ureduce
+    r = func(a, **kwargs)
+        ^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4669, in _quantile_ureduce_func
+    result = _quantile(arr,
+             ^^^^^^^^^^^^^^
+  File "/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py", line 4793, in _quantile
+    slices_having_nans = np.isnan(arr[-1, ...])
+                                  ~~~^^^^^^^^^
+IndexError: index -1 is out of bounds for axis 0 with size 0

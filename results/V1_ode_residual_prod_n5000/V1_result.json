@@ -1,0 +1,63 @@
+{
+  "n_cells": 5000,
+  "checkpoint": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_output/l2_checkpoint_adaptive",
+  "compare_mode": "stored",
+  "source": {
+    "ms": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_input/Ms.npy",
+    "mu": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_input/Mu.npy",
+    "l3_dir": "/mnt/t9/datasets/ad_microglia_fate_landscape_output/10_regvelo/sparse_engine_output/l3_output_adaptive",
+    "population": 74984,
+    "sampled": 5000,
+    "rate_max_mode": "adaptive",
+    "rate_max_actual": 107.30583953857422
+  },
+  "production_config": {
+    "K": 10,
+    "picard_tol": 0.001,
+    "picard_max_iter": 10
+  },
+  "reference_config": {
+    "K": 20,
+    "tol": 1e-06,
+    "max_iter": 50,
+    "n_unconverged_batches": 0
+  },
+  "residual_s_end": {
+    "median": 0.00030318793881342035,
+    "p95": 0.001726623362427872,
+    "p99": 0.004257209659534107,
+    "max": 0.021390608745126945,
+    "mean": 0.0005483047784562107
+  },
+  "residual_u_end": {
+    "median": 0.00078215612910201,
+    "p95": 0.003323265508266317,
+    "p99": 0.007572932702126277,
+    "max": 0.025148500805100813,
+    "mean": 0.001158884496409085
+  },
+  "residual_v": {
+    "median": 0.001139976317824966,
+    "p95": 0.0057108327474568,
+    "p99": 0.011654007650669254,
+    "max": 0.042202975009769994,
+    "mean": 0.0017887152208373649
+  },
+  "verdict": "FAIL",
+  "production_l3_metadata": {
+    "engine_route": "closed_form_foh",
+    "picard_residual_max": 0.0009645787067711353,
+    "picard_residual_max_eff": 0.0009645787067711353,
+    "krylov_residual_probe": 0.0,
+    "n_unconverged_batches": 0,
+    "route_counts": {
+      "closed_form_foh": 74,
+      "krylov_expmv": 0,
+      "full_sparse_expmv": 0,
+      "full_dynamics_path": 0
+    },
+    "N": 74984,
+    "G": 17714,
+    "alpha_is_per_cell": true
+  }
+}

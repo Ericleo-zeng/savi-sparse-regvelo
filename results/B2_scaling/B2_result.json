@@ -1,0 +1,136 @@
+{
+  "timestamp": "2026-09-17T19:36:07.685970+00:00",
+  "device": "cuda",
+  "scaling_runs": [
+    {
+      "type": "cell",
+      "n_cells": 5000,
+      "n_genes": 17714,
+      "batch_size": 1024,
+      "runtime_sec": 10.831,
+      "peak_gpu_gb": 6.524,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_cell_n5000"
+    },
+    {
+      "type": "cell",
+      "n_cells": 10000,
+      "n_genes": 17714,
+      "batch_size": 1024,
+      "runtime_sec": 20.843,
+      "peak_gpu_gb": 6.524,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_cell_n10000"
+    },
+    {
+      "type": "cell",
+      "n_cells": 25000,
+      "n_genes": 17714,
+      "batch_size": 1024,
+      "runtime_sec": 51.425,
+      "peak_gpu_gb": 6.524,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_cell_n25000"
+    },
+    {
+      "type": "cell",
+      "n_cells": 50000,
+      "n_genes": 17714,
+      "batch_size": 1024,
+      "runtime_sec": 113.351,
+      "peak_gpu_gb": 6.524,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_cell_n50000"
+    },
+    {
+      "type": "cell",
+      "n_cells": 74984,
+      "n_genes": 17714,
+      "batch_size": 1024,
+      "runtime_sec": 204.563,
+      "peak_gpu_gb": 6.524,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_cell_n74984"
+    },
+    {
+      "type": "gene",
+      "n_cells": 5000,
+      "n_genes": 5000,
+      "batch_size": 1024,
+      "runtime_sec": 1.392,
+      "peak_gpu_gb": 1.991,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_gene_g5000"
+    },
+    {
+      "type": "gene",
+      "n_cells": 5000,
+      "n_genes": 10000,
+      "batch_size": 1024,
+      "runtime_sec": 3.823,
+      "peak_gpu_gb": 3.763,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_gene_g10000"
+    },
+    {
+      "type": "gene",
+      "n_cells": 5000,
+      "n_genes": 17714,
+      "batch_size": 1024,
+      "runtime_sec": 10.068,
+      "peak_gpu_gb": 6.524,
+      "status": "success",
+      "error": null,
+      "out_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B2_scaling/l3_gene_g17714"
+    }
+  ],
+  "competitor_runs": [
+    {
+      "type": "scvelo",
+      "n_cells": 5000,
+      "n_genes": 17714,
+      "runtime_sec": 37.055,
+      "peak_cpu_gb": 2.126,
+      "status": "success",
+      "error": null
+    },
+    {
+      "type": "scvelo",
+      "n_cells": 10000,
+      "n_genes": 17714,
+      "runtime_sec": 106.273,
+      "peak_cpu_gb": 4.251,
+      "status": "success",
+      "error": null
+    }
+  ],
+  "a1_references": [
+    {
+      "source": "A1#13",
+      "n_cells": 5000,
+      "G": 17714,
+      "K": 10,
+      "batch": 1024,
+      "peak_gpu_gb": 5.82,
+      "status": "success",
+      "note": "L3 peaks at 5.82 GB (N=5000, G=17714, K=10, bs=1024)"
+    },
+    {
+      "source": "A1#13",
+      "n_cells": 5000,
+      "G": 17714,
+      "K": 20,
+      "batch": 1024,
+      "status": "OOM",
+      "note": "K20 @ bs1024 OOM on 11.5 GB device"
+    }
+  ],
+  "figure_caption_note": "A1#13 reference point: N=5,000 cells, G=17,714 genes, K=10, batch size 1,024 peaked at 5.82 GB GPU memory. The tightened reference (K=20, batch size 1,024) raised the peak beyond the 11.5 GB device capacity and was stopped as an OOM; it is therefore omitted from the plot and reported only here."
+}

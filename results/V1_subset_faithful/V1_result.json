@@ -1,0 +1,63 @@
+{
+  "n_cells": 5000,
+  "checkpoint": "results/V5_rate_max/ckpt_adaptive",
+  "compare_mode": "stored",
+  "source": {
+    "ms": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/_subset/Ms_sub_n5000.npy",
+    "mu": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/_subset/Mu_sub_n5000.npy",
+    "l3_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/V5_rate_max/l3_adaptive",
+    "population": 5000,
+    "sampled": 5000,
+    "rate_max_mode": "adaptive",
+    "rate_max_actual": 107.30583953857422
+  },
+  "production_config": {
+    "K": 10,
+    "picard_tol": 0.001,
+    "picard_max_iter": 10
+  },
+  "reference_config": {
+    "K": 20,
+    "tol": 1e-06,
+    "max_iter": 50,
+    "n_unconverged_batches": 0
+  },
+  "residual_s_end": {
+    "median": 0.00022474646077424646,
+    "p95": 0.0011510558290786224,
+    "p99": 0.004619843680206458,
+    "max": 0.015728345711009915,
+    "mean": 0.0004204311106296136
+  },
+  "residual_u_end": {
+    "median": 0.0007972587755673211,
+    "p95": 0.003048074665242106,
+    "p99": 0.007248238451716767,
+    "max": 0.020479182443363088,
+    "mean": 0.001128583573027557
+  },
+  "residual_v": {
+    "median": 0.0012263744465011994,
+    "p95": 0.004002857757802978,
+    "p99": 0.00935733589930095,
+    "max": 0.036331729399207625,
+    "mean": 0.0015884022412499905
+  },
+  "verdict": "PASS",
+  "production_l3_metadata": {
+    "engine_route": "closed_form_foh",
+    "picard_residual_max": 0.0007070897263474762,
+    "picard_residual_max_eff": 0.0007070897263474762,
+    "krylov_residual_probe": 0.0,
+    "n_unconverged_batches": 0,
+    "route_counts": {
+      "closed_form_foh": 5,
+      "krylov_expmv": 0,
+      "full_sparse_expmv": 0,
+      "full_dynamics_path": 0
+    },
+    "N": 5000,
+    "G": 17714,
+    "alpha_is_per_cell": true
+  }
+}

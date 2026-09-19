@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-09-18T14:15:10+0800",
+  "status": "human_review_B1_final",
+  "design": {
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "seed": 20260914,
+    "hvg_source": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n500/hvg_genes.txt",
+    "gene_hash": "fcae0d19135a8a32",
+    "W_nnz": 7996
+  },
+  "savi": {
+    "l2_runtime_sec": 296.26,
+    "l2_peak_gpu_gb": 0.0,
+    "l3_runtime_sec": 1.2,
+    "l3_peak_gpu_gb": 0.188,
+    "velocity_path": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n5000/l3_production/v.npy"
+  },
+  "regvelo_gpu": {
+    "status": "ran",
+    "error": null,
+    "trace": null,
+    "peak_gpu_gb": 4.928,
+    "runtime_sec": null,
+    "train_runtime_sec": 1675.74,
+    "velocity_runtime_sec": 25.45,
+    "total_runtime_sec": 1701.19,
+    "loss_log_path": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n5000/regvelo_gpu_loss.log",
+    "velocity_path": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n5000/v_regvelo.npy"
+  },
+  "scvelo": {
+    "status": "scvelo_failed: setting an array element with a sequence."
+  },
+  "pairwise": {
+    "savi_regvelo": {
+      "cosine": {
+        "n_finite": 5000,
+        "median": 0.046439706794738266,
+        "p99": 0.5546427270021306,
+        "min": -0.5092109920938076,
+        "max": 0.7696470816646995
+      },
+      "relative_l2": {
+        "n_finite": 5000,
+        "median": 2.0807106792728582,
+        "p99": 5.787126724632093,
+        "min": 0.9103921279055196,
+        "max": 21.73047506154782
+      }
+    },
+    "savi_scvelo": {
+      "cosine": {
+        "n_finite": 0,
+        "median": NaN,
+        "p99": NaN,
+        "min": NaN,
+        "max": NaN
+      },
+      "relative_l2": {
+        "n_finite": 0,
+        "median": NaN,
+        "p99": NaN,
+        "min": NaN,
+        "max": NaN
+      }
+    },
+    "regvelo_scvelo": {
+      "cosine": {
+        "n_finite": 0,
+        "median": NaN,
+        "p99": NaN,
+        "min": NaN,
+        "max": NaN
+      },
+      "relative_l2": {
+        "n_finite": 0,
+        "median": NaN,
+        "p99": NaN,
+        "min": NaN,
+        "max": NaN
+      }
+    },
+    "common_genes": 2000,
+    "scvelo_note": "scvelo_failed: setting an array element with a sequence."
+  },
+  "interpretation": {
+    "savi_regvelo": "reformulation changes field (limitation)",
+    "savi_scvelo": "unavailable",
+    "regvelo_scvelo": "unavailable"
+  },
+  "interpretation_rubric": {
+    "cosine_median_ge_0.9": "strong agreement",
+    "cosine_median_0.7_to_0.9": "partial directional agreement (broad directional agreement in text)",
+    "cosine_median_lt_0.7": "reformulation changes field (limitation)"
+  },
+  "versions": {
+    "regvelo": "0.4.2",
+    "scvelo": "0.3.4",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.2"
+  },
+  "human_review_timestamp": "2026-09-18T19:02:06+0800"
+}

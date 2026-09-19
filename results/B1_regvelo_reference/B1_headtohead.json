@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-09-18T13:43:10+0800",
+  "design": {
+    "n_cells": 500,
+    "n_genes": 2000,
+    "seed": 20260914,
+    "n_genes_selected_from": 5000,
+    "gene_selection": "top 2000 spliced-variance genes from 5k-cell subset",
+    "gene_hash": "fcae0d19135a8a32",
+    "W_nnz": 7996
+  },
+  "savi": {
+    "l2_runtime_sec": 29.14,
+    "l2_peak_gpu_gb": 0.0,
+    "l3_runtime_sec": 0.51,
+    "l3_peak_gpu_gb": 0.188
+  },
+  "regvelo_gpu": {
+    "status": "ran",
+    "error": null,
+    "trace": null,
+    "peak_gpu_gb": 4.308,
+    "runtime_sec": 132.53,
+    "velocity_runtime_sec": 0.54,
+    "loss_log_path": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n500/regvelo_gpu_loss.log",
+    "velocity_path": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/_inputs_hvg2k_n500/v_regvelo.npy"
+  },
+  "regvelo_cpu": {
+    "status": "not_needed"
+  },
+  "comparison": {
+    "relative_l2": {
+      "median": 1.0661378549759757,
+      "p99": 1.1268477538026946,
+      "min": 0.9916190392852943,
+      "max": 1.1395414359547205
+    },
+    "cosine": {
+      "median": -0.09576819709874526,
+      "p99": 0.09617008757430398,
+      "min": -0.19861358141007554,
+      "max": 0.1862172425903786
+    }
+  },
+  "interpretation_rubric": {
+    "cosine_median_ge_0.9": "strong agreement",
+    "cosine_median_0.7_to_0.9": "partial directional agreement (broad directional agreement in text)",
+    "cosine_median_lt_0.7": "reformulation changes field (limitation)"
+  },
+  "versions": {
+    "regvelo": "0.4.2",
+    "scvelo": "0.3.4",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.2"
+  },
+  "diagnosis": {
+    "gene_axis": {
+      "order_match": true,
+      "first_5_diffs": [],
+      "per_gene_magnitude_spearman_rho": -0.05972331893082973,
+      "per_gene_magnitude_spearman_p": 0.0075485370593553576
+    },
+    "velocity_norms": {
+      "savi": {
+        "median": 105.96343231201172,
+        "p99": 151.59024780273427,
+        "min": 90.51424407958984,
+        "max": 234.92384338378906
+      },
+      "regvelo": {
+        "median": 29.331661224365234,
+        "p99": 47.33263942718506,
+        "min": 19.999515533447266,
+        "max": 48.96346664428711
+      },
+      "ratio_regvelo_to_savi_median": 0.2768092751502991,
+      "ratio_regvelo_to_savi_p99": 0.3122406601905823
+    },
+    "api_provenance": {
+      "regvelo_velocity_source": "model.get_velocity(adata, return_numpy=True)",
+      "is_official_api": true
+    },
+    "scvelo_anchor": {
+      "status": "ran",
+      "common_genes": 2000,
+      "missing_genes": 0,
+      "savi_vs_scvelo": {
+        "n_finite": 0,
+        "median": NaN,
+        "p99": NaN,
+        "min": NaN,
+        "max": NaN
+      },
+      "regvelo_vs_scvelo": {
+        "n_finite": 0,
+        "median": NaN,
+        "p99": NaN,
+        "min": NaN,
+        "max": NaN
+      }
+    },
+    "timestamp": "2026-09-18T13:50:28+0800"
+  }
+}

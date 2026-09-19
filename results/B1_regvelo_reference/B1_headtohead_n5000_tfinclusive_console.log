@@ -1,0 +1,9 @@
+[2026-09-18T18:53:39+0800] Loaded 2007 genes from /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/suggested_gene_set_hvg2k_plus_missing_tfs.txt
+[2026-09-18T18:53:40+0800] Built inputs: N=5000, G=2007, W nnz=22066, gene_hash=5adf31a2663b18b8, TF coverage=11/11
+[2026-09-18T18:53:40+0800] Reusing existing SAVI L2+L3 outputs...
+[2026-09-18T18:53:40+0800] Reusing existing RegVelo GPU output...
+[2026-09-18T18:53:40+0800] Running scVelo dynamical anchor (fixed pipeline)...
+[2026-09-18T18:54:49+0800] scVelo velocity: shape=(5000, 2007), non-NaN ratio=0.0558, recovered genes=112, value abs median=5.2835e-02, max=3.7700e+01; per-cell norm median=6.1019e+00, max=3.9561e+01
+[2026-09-18T18:54:49+0800] scVelo completed in 69.2s; retained 5000 cells, 2007 genes
+[2026-09-18T18:54:49+0800] Wrote /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/B1_headtohead_n5000_tfinclusive.json
+[2026-09-18T18:54:49+0800] Appended section 7 to /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/B1_headtohead_diagnosis.md

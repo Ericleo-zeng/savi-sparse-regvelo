@@ -1,0 +1,16 @@
+{
+  "engine_route": "closed_form_foh",
+  "picard_residual_max": 1.384062557008292e-06,
+  "picard_residual_max_eff": 2e-06,
+  "krylov_residual_probe": 1.1636556883407217e-35,
+  "n_unconverged_batches": 18,
+  "route_counts": {
+    "closed_form_foh": 18,
+    "krylov_expmv": 0,
+    "full_sparse_expmv": 0,
+    "full_dynamics_path": 0
+  },
+  "N": 18213,
+  "G": 13335,
+  "alpha_is_per_cell": true
+}

@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-16T08:09:55",
+  "cmd": "11_e4_fate_control_2026-09-15.py --l3-full results/V5_rate_max/l3_adaptive --l3-nocycle results/V7_no_cycling/l3_v7 --l3-nocycle-norenorm results/V7_no_cycling/l3_v7a --latent results/_subset/X_sub_n5000.npy --labels results/_subset/state_labels_n5000.npy --samples results/_subset/sample_ids_n5000.npy --with-diffusion-only --out results/E4_fate_control",
+  "k": 30,
+  "w_v": 0.8,
+  "r": 30,
+  "N": 5000,
+  "arms": {
+    "full": {
+      "l3_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/V5_rate_max/l3_adaptive"
+    },
+    "no_cycle": {
+      "l3_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/V7_no_cycling/l3_v7",
+      "fate_spearman_median": 1.0,
+      "fate_spearman_min": 0.14285714285714285,
+      "top_state_agreement": 0.8922,
+      "class_shift_Linf": 0.18445980574281928
+    },
+    "no_cycle_norenorm": {
+      "l3_dir": "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/V7_no_cycling/l3_v7a",
+      "fate_spearman_median": 0.9428571428571428,
+      "fate_spearman_min": -0.2571428571428571,
+      "top_state_agreement": 0.8346,
+      "class_shift_Linf": 0.1571222673185716
+    },
+    "diffusion_only": {
+      "baseline": true,
+      "fate_spearman_median": 0.8285714285714286,
+      "fate_spearman_min": -0.7142857142857143,
+      "top_state_agreement": 0.6116,
+      "class_shift_Linf": 0.3430832229927019
+    }
+  }
+}

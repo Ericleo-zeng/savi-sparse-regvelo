@@ -1,0 +1,44 @@
+{
+  "V1": {
+    "status": "FAIL",
+    "detail_file": "V1_ode_residual/V1_result.json"
+  },
+  "V2": {
+    "status": "PASS",
+    "detail_file": "V2_batch_invariance/V2_result.json"
+  },
+  "V3": {
+    "status": "WARN",
+    "detail_file": "V3_cpu_gpu/V3_result.json"
+  },
+  "V1b": {
+    "status": "FAIL",
+    "detail_file": "V1_ode_residual_prod_n5000/V1_result.json"
+  },
+  "V1c": {
+    "status": "PASS",
+    "detail_file": "V1_subset_faithful/V1_result.json"
+  },
+  "V5_rate_max": {
+    "status": "FAIL",
+    "role": "判决依据",
+    "detail_file": "l3_adaptive__vs__l3_r20_l3_r100/COMPARE_result.json"
+  },
+  "V8_K_sensitivity": {
+    "status": "PASS",
+    "role": "判决依据",
+    "detail_file": "V8_K_sensitivity/COMPARE_result.json"
+  },
+  "V5_K20_probe": {
+    "status": "PASS",
+    "role": "参考",
+    "detail_file": "l3_adaptive_srcprobe__vs__l3_adaptive_K20probe/COMPARE_result.json"
+  },
+  "known_issues": {
+    "T0.4（已修）": "sparse_regvelo_engine.py：--rate-max 20 因 20.0 兼任 argparse 默认值与合法请求值被静默忽略（走 adaptive）；187/224/309/312/572 五处已修，真实 rerun 验证 requested=actual=20/mode=manual",
+    "T0.5（已记录）": "子集参考 checkpoint = 生产 per-gene 参数 + 子集 per-cell 量的拼接物（config.ensure_subset_checkpoint 设计行为）；仅适用 L3 数值验证，禁止作 L2 参数级对比参考；metadata 已补 params_source 等字段",
+    "V5 caveat": "rate_max 高度敏感：rm20 v cosine 中位 0.386 / rm100 0.699（3b 干净对比）；100 vs 107.31 亦 FAIL——adaptive 系数(p99.5×1.2)是决定性超参，生产结论依赖 adaptive 的选择，报告讨论节须保留此 caveat",
+    "显存标度律": "L3 峰值显存 ∝ K×batch_size：K=10×bs=1024 → 5.82 GB；K=20×bs=1024 在 11.5 GB 卡 OOM，bs=512 通过。V8（K≤40, bs=2048）当年在更大显存机器上运行，跨机对比须注明硬件",
+    "溯源链（已加固）": "2026-09-15 起：run_l3_only 将 source_checkpoint 块（path+hash+rate_max_*）写入 l3_metadata.json；06 v2 对比前强制完整性检查并提示 ref/test 配置差异；05 脚本 checkpoint 守卫校验 metadata 内容"
+  }
+}

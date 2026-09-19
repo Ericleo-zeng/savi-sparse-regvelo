@@ -1,0 +1,32 @@
+/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py:193: DeprecationWarning: Automatic neighbor calculation is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors first with Scanpy.
+  scv.pp.moments(ad, n_pcs=10, n_neighbors=30)
+/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/scvelo/preprocessing/moments.py:71: DeprecationWarning: `neighbors` is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors with Scanpy.
+  neighbors(
+/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/site-packages/scvelo/preprocessing/neighbors.py:233: DeprecationWarning: Automatic computation of PCA is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute PCA with Scanpy first.
+  _set_pca(adata=adata, n_pcs=n_pcs, use_highly_variable=use_highly_variable)
+[2026-09-18T13:48:05+0800] Loading SAVI and RegVelo velocities...
+[2026-09-18T13:48:05+0800] SAVI v shape=(500, 2000), RegVelo v shape=(500, 2000), genes=2000
+[2026-09-18T13:48:05+0800] Running scVelo dynamical anchor...
+Normalized count data: X, spliced, unspliced.
+computing neighbors
+    finished (0:00:06)
+computing moments based on connectivities
+    finished (0:00:00)
+recovering dynamics (using 1/32 cores)
+WARNING: Unable to create progress bar. Consider installing `tqdm` as `pip install tqdm` and `ipywidgets` as `pip install ipywidgets`,
+or disable the progress bar using `show_progress_bar=False`.
+/mnt/d/Software/miniconda3/envs/rfd3_env/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=96138) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+    finished (0:00:06)
+computing velocities
+    finished (0:00:00)
+Traceback (most recent call last):
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 242, in <module>
+    main()
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 85, in main
+    scv_cos = run_scvelo_anchor(hvg_genes)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/B1_headtohead_diagnose.py", line 214, in run_scvelo_anchor
+    v_regvelo_c = v_regvelo[:, idx_hvg]
+                  ~~~~~~~~~^^^^^^^^^^^^
+IndexError: too many indices for array: array is 0-dimensional, but 2 were indexed

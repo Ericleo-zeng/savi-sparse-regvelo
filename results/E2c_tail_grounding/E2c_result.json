@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-09-16T08:09:32",
+  "cmd": "12_e2c_tail_grounding_2026-09-15.py --checkpoint results/V5_rate_max/ckpt_adaptive --ms results/_subset/Ms_sub_n5000.npy --mu results/_subset/Mu_sub_n5000.npy --labels results/_subset/state_labels_n5000.npy --out results/E2c_tail_grounding",
+  "checkpoint": "results/V5_rate_max/ckpt_adaptive",
+  "N": 5000,
+  "top_frac": 0.01,
+  "overall": {
+    "median": 0.0012453653738977357,
+    "p99": 0.00973155206865018,
+    "max": 0.04509135664084038
+  },
+  "by_state": {
+    "C1q_inflammatory": {
+      "n": 942,
+      "mean_rel": 0.001716843646387585,
+      "p99_rel": 0.011488949563545636,
+      "top1pct_count": 19,
+      "top1pct_share": 0.38,
+      "population_share": 0.1884,
+      "enrichment": 2.0169851380042463
+    },
+    "DAM_like": {
+      "n": 462,
+      "mean_rel": 0.0016039724744393107,
+      "p99_rel": 0.008330037595619462,
+      "top1pct_count": 3,
+      "top1pct_share": 0.06,
+      "population_share": 0.0924,
+      "enrichment": 0.6493506493506493
+    },
+    "Homeostatic": {
+      "n": 1794,
+      "mean_rel": 0.0016112303436149893,
+      "p99_rel": 0.008991671282962587,
+      "top1pct_count": 12,
+      "top1pct_share": 0.24,
+      "population_share": 0.3588,
+      "enrichment": 0.6688963210702341
+    },
+    "IFN_responsive": {
+      "n": 1393,
+      "mean_rel": 0.001680323497472103,
+      "p99_rel": 0.009298112940108088,
+      "top1pct_count": 12,
+      "top1pct_share": 0.24,
+      "population_share": 0.2786,
+      "enrichment": 0.8614501076812634
+    },
+    "PU1low_lymphoid": {
+      "n": 359,
+      "mean_rel": 0.0015863091106454298,
+      "p99_rel": 0.009129985260953816,
+      "top1pct_count": 4,
+      "top1pct_share": 0.08,
+      "population_share": 0.0718,
+      "enrichment": 1.1142061281337048
+    },
+    "Proliferating": {
+      "n": 50,
+      "mean_rel": 0.0016735787048610215,
+      "p99_rel": 0.00812140184618729,
+      "top1pct_count": 0,
+      "top1pct_share": 0.0,
+      "population_share": 0.01,
+      "enrichment": 0.0
+    }
+  }
+}

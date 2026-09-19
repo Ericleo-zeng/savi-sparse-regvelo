@@ -1,0 +1,48 @@
+[2026-09-18T00:38:40+0800] Building aligned inputs...
+[2026-09-18T00:38:47+0800] Aligned inputs: N=18213, G=13335, latent=10
+[2026-09-18T00:38:47+0800] Building TRRUST W...
+[2026-09-18T00:38:47+0800] [W conversion] input TSV lines=7057
+[2026-09-18T00:38:47+0800] [W conversion] output sparse shape=(13335, 13335), nnz=2866, sparsity=0.999984
+[2026-09-18T00:38:47+0800] [W conversion] unique TFs=459
+[2026-09-18T00:38:47+0800] W stats: {'source': 'TRRUST v2 mouse', 'n_genes': 13335, 'n_tfs': 459, 'nnz': 2866, 'sparsity': 0.999984, 'main_w_nnz': 194843, 'main_w_sparsity': 0.999379, 'edge_ratio_to_main': 0.0147}
+[2026-09-18T00:38:47+0800] Running L2 (adaptive rate bound)...
+[2026-09-18T00:38:47+0800] L2 command: /mnt/d/Software/miniconda3/envs/rfd3_env/bin/python /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/sparse_regvelo/sparse_regvelo_engine.py --ms /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/Ms_aligned.npy --mu /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/Mu_aligned.npy --w /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/W.npz --x-scvi /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/X_pca10_aligned.npy --l2-only --l2-checkpoint /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/l2_checkpoint --out-dir /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/l2_logs --batch-size 1024
+[2026-09-18T02:00:41+0800] L2 stdout:
+ite=13335/13335, min=0.000125059, median=0.313744, p99=6882.4, max=7996.21
+[REFINE] iter=01/10 active=13335/13335 s_bg_median=0.15 s_ts_median=0.05
+[REFINE] iter=01 done | improved=11986/13335 | stagnant=1349
+[REFINE] iter=02/10 active=13335/13335 s_bg_median=0.15 s_ts_median=0.05
+[REFINE] iter=02 done | improved=8026/13335 | stagnant=5309
+[REFINE] iter=03/10 active=13335/13335 s_bg_median=0.15 s_ts_median=0.05
+[REFINE] iter=03 done | improved=10025/13335 | stagnant=3310
+[REFINE] iter=04/10 active=13335/13335 s_bg_median=0.075 s_ts_median=0.025
+[REFINE] iter=04 done | improved=9639/13335 | stagnant=3696
+[REFINE] iter=05/10 active=13335/13335 s_bg_median=0.075 s_ts_median=0.025
+[REFINE] iter=05 done | improved=10173/13335 | stagnant=3162
+[REFINE] iter=06/10 active=13335/13335 s_bg_median=0.075 s_ts_median=0.025
+[REFINE] iter=06 done | improved=10101/13335 | stagnant=3234
+[REFINE] iter=07/10 active=13335/13335 s_bg_median=0.075 s_ts_median=0.025
+[REFINE] iter=07 done | improved=10308/13335 | stagnant=3027
+[REFINE] iter=08/10 active=13335/13335 s_bg_median=0.075 s_ts_median=0.025
+[REFINE] iter=08 done | improved=10417/13335 | stagnant=2918
+[REFINE] iter=09/10 active=12397/13335 s_bg_median=0.075 s_ts_median=0.025
+[REFINE] iter=09 done | improved=10537/12397 | stagnant=1860
+[REFINE] iter=10/10 active=12394/13335 s_bg_median=0.0375 s_ts_median=0.0125
+[REFINE] iter=10 done | improved=10506/12394 | stagnant=1888
+[L2] beta: finite=13335/13335, min=0.011183, median=23.1816, p99=89.4215, max=89.4215
+[L2] gamma: finite=13335/13335, min=0.011183, median=4.7698, p99=89.4215, max=107.306
+[L2] gamma/beta: finite=13335/13335, min=0.000125059, median=0.350519, p99=6882.4, max=7996.21
+[L2-only] 检查点已保存至: /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/l2_checkpoint
+logs -> /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B3_dataset2/_inputs/l2_logs/sparse_regvelo_engine_20260918_020041.json
+
+[2026-09-18T02:00:41+0800] L2 completed in 4914.3s, GPU mem delta=0.00GB
+[2026-09-18T02:00:42+0800] Prepared tightened checkpoint (picard_max_iter=50)
+[2026-09-18T02:00:42+0800] Running L3 K=10 on cuda (tightened=False)...
+[2026-09-18T02:01:04+0800] Running L3 K=20 on cuda (tightened=True)...
+[2026-09-18T02:02:18+0800] ERROR: 显存红线违反: 8.19 GB >= 8 GB
+[2026-09-18T02:03:17+0800] Resuming B3 after tightened K=20 OOM at batch=1024...
+[2026-09-18T02:03:17+0800] Loaded production velocity: shape=(18213, 13335)
+[2026-09-18T02:03:17+0800] Retry tightened K=20 with batch_size=512
+[2026-09-18T02:04:26+0800] Tightened reference succeeded with batch_size=512: 68.61s, mem=0.188GB
+[2026-09-18T02:04:32+0800] Running CPU L3 (K=10, batch=1024)...
+[2026-09-18T02:21:24+0800] ERROR: 'NoneType' object has no attribute 'update'

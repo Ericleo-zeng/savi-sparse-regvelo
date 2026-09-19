@@ -1,0 +1,48 @@
+{
+  "n_cells": 500,
+  "batch_size": 1024,
+  "arrays": {
+    "u_end": {
+      "median": 1.6572860693451934e-06,
+      "p95": 1.1193998057255698e-05,
+      "p99": 9.137309019609756e-05,
+      "max": 0.0002130899643155008,
+      "mean": 4.454280530230783e-06,
+      "max_abs_diff": 0.0625
+    },
+    "s_end": {
+      "median": 2.339579490749336e-08,
+      "p95": 6.752143812250968e-08,
+      "p99": 6.158976635544172e-07,
+      "max": 1.153727305632406e-06,
+      "mean": 3.930641928604783e-08,
+      "max_abs_diff": 0.00018230080604553223
+    },
+    "v": {
+      "median": 3.04422766088466e-07,
+      "p95": 5.195530053004537e-07,
+      "p99": 1.5645663223671892e-06,
+      "max": 2.0857885529071075e-06,
+      "mean": 3.366806682690399e-07,
+      "max_abs_diff": 0.0005703121423721313
+    }
+  },
+  "route_check": {
+    "cpu": {
+      "closed_form_foh": 1,
+      "krylov_expmv": 0,
+      "full_sparse_expmv": 0,
+      "full_dynamics_path": 0
+    },
+    "cuda": {
+      "closed_form_foh": 1,
+      "krylov_expmv": 0,
+      "full_sparse_expmv": 0,
+      "full_dynamics_path": 0
+    },
+    "identical": true
+  },
+  "v_cosine_min": 0.9999999999978255,
+  "verdict": "WARN",
+  "worst_max_rel": 0.0002130899643155008
+}

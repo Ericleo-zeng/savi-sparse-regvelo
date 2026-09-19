@@ -1,0 +1,10 @@
+[2026-09-18T13:47:32+0800] Loading SAVI and RegVelo velocities...
+[2026-09-18T13:47:32+0800] SAVI v shape=(500, 2000), RegVelo v shape=(500, 2000), genes=2000
+[2026-09-18T13:47:32+0800] Running scVelo dynamical anchor...
+Normalized count data: X, spliced, unspliced.
+[2026-09-18T13:47:34+0800] Appended diagnosis to JSON.
+[2026-09-18T13:47:34+0800] Wrote /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/B1_headtohead_diagnosis.md
+ARTIFACT1=order_match=True; gene_spearman_rho=-0.0597; first_diffs=[]
+ARTIFACT2=norm_ratio_median=2.7681e-01; scale_mismatch_2orders=NO; official_api=True
+ARTIFACT3=SAVI-scVelo_cosine_median=N/A; RegVelo-scVelo_cosine_median=N/A; scvelo_status=scvelo_failed: module 'scvelo.preprocessing' has no attribute 'log1p'
+VERDICT=after_excluding_axes_and_scale_median_cosine=-0.0958

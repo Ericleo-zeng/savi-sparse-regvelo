@@ -1,0 +1,54 @@
+# U6 — GitHub Actions CI skeleton for sparse_regvelo validation
+# STATUS: template only; no digest; no external-rerun claim.
+# AUTHORIZATION: generated as skeleton; must be reviewed, enabled, and run by human.
+# PLACEMENT: .github/workflows/ci.yml in the repository root.
+
+name: sparse_regvelo-validation-ci
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: pytest -q sparse_regvelo/tests/
+
+  # subset-validation:
+  #   runs-on: ubuntu-latest
+  #   needs: unit-tests
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #
+  #     - name: Download validation inputs (placeholder)
+  #       run: |
+  #         # Human must provide a read-only, versioned data source.
+  #         echo "DATA_SOURCE must be configured"
+  #         exit 1
+  #
+  #     - name: Run subset validation
+  #       run: |
+  #         python validation_Sparse_regvelo/04_ode_residual_revised_2026-09-15.py --n-cells 500
+  #         python validation_Sparse_regvelo/11_e4_fate_control_2026-09-15.py --help
+
+# 1. Pin dependency versions in requirements.txt.
+# 2. Decide whether to run subset-validation in CI (requires data access).
+# 3. Add artifact upload for validation JSONs.
+# 4. Do not claim external rerun or locked-environment certification until the workflow has actually passed.

@@ -1,0 +1,9 @@
+[2026-09-18T13:46:29+0800] Loading SAVI and RegVelo velocities...
+[2026-09-18T13:46:29+0800] SAVI v shape=(500, 2000), RegVelo v shape=(500, 2000), genes=2000
+[2026-09-18T13:46:29+0800] Running scVelo dynamical anchor...
+[2026-09-18T13:46:30+0800] Appended diagnosis to JSON.
+[2026-09-18T13:46:30+0800] Wrote /home/lab-zeng/research_storage/工作文件/AD_Regvelo优化策略/validation_Sparse_regvelo/results/B1_regvelo_reference/B1_headtohead_diagnosis.md
+ARTIFACT1=order_match=True; gene_spearman_rho=-0.0597; first_diffs=[]
+ARTIFACT2=norm_ratio_median=2.7681e-01; scale_mismatch_2orders=NO; official_api=True
+ARTIFACT3=SAVI-scVelo_cosine_median=N/A; RegVelo-scVelo_cosine_median=N/A; scvelo_status=load_failed: To copy an AnnData object in backed mode, pass a filename: `.copy(filename='myfilename.h5ad')`. To load the object into memory, use `.to_memory()`.
+VERDICT=after_excluding_axes_and_scale_median_cosine=-0.0958
